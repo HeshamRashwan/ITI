@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 12px;
+  font-size: 17px;
+  width: 8%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: orange;}
+#About {background-color: green;}
+#Offering {background-color: orange;}
+#Partnership {background-color: orange;}
+#Services{background-color: orange;}
+#News{background-color: orange;}
+#Login {background-color: orange;}
+
+
+</style>
+</head>
+<body>
+<img src="https://i.imgur.com/uXImMY1.png" alt="ItI logo" style="float:left;width:500px;height:75px;">
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('About', this, 'green')">About</button>
+<button class="tablink" onclick="openPage('Offering', this, 'orange')">Offering</button>
+<button class="tablink" onclick="openPage('Partnership', this, 'orange')">Partnership</button>
+<button class="tablink" onclick="openPage('Services', this, 'orange')">Services</button>
+<button class="tablink" onclick="openPage('News', this, 'orange')">News</button>
+<button class="tablink" onclick="openPage('Login', this, 'orange')">Login</button>
+
+
+
+
+ <!-- identify Home tap and it's data -->
+ 
+<div id="Home" class="tabcontent">
+  <h3>ITI Home page </h3>
+  <p> <pre>
+More than 25 years of Human Capacity
+Building to reach Youth Empowerment Leadership Partnership Human Capacity Building
+ </pre></p>
+</div>
+
+ <!-- identify About tap and it's data -->
+ 
+<div id="About" class="tabcontent">
+  <h3>About ITI</h3>
+  <p>Information Technology Institute is a pioneering national institute with a regional influence and international linkage. Since it was established in 1993, ITI has been devoted to provide a large pool of promising youth with world-class human capacity building programs and empirical learning approach to profoundly scale up the impact of the aspiring Egyptian youth in the ICT workplace. While moving to a future where everyone is acquainted with technology and is capable to contribute in shaping the future of the ICT industry, the ITI provides Egyptians from 12 year olds till 60 year olds with the needed support. It offers Egyptians free scholarships and training in the different areas of the market.</p> 
+</div>
+ <!-- identify Offering tap and it's data -->
+ 
+<div id="Offering" class="tabcontent">
+
+
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+         <a href="/Site/Offers/Scholarships">Scholarships</a>
+         <li><a href="/Site/Offers/KnowledgeTransfer">Innovation and Knowledge Transfer</a></li>
+             <li><a href="/Site/Offers/Masters">International Joint Academic Programs</a></li>
+             <li><a href="/Site/Offers/CareerPromotion">Career Development Program</a></li>
+             <li><a href="/Site/Offers/MakerSpace">ITI MakerSpace</a></li>
+             <li><a href="/Site/Offers/JuniorsAcademy">Juniors Academy</a></li>
+         </ul>
+                                                    
+</div>
+ <!-- identify Partnership tap and it's data -->
+<div id="Partnership" class="tabcontent">
+ <ul id="partnershipsLnks" class="dropdown-menu">
+     <li><a href='/Site/Partnerships?Business'>Business Partnerships</a>
+     <li><a href='/Site/Partnerships?Academic'>Academic Partnerships</a>
+     <li><a href="/Site/Partnerships/SouthAndSouthCooperation">The South-to-South Cooperation</a></li>
+ </ul>
+ 
+  <!-- identify Services tap and it's data -->
+
+
+</div>
+<div id="Services" class="tabcontent">
+ <ul class="dropdown-menu">
+                                                
+   <li>
+   <a href='/Site/OurServices?Formulating'>Formulating Capacity Building Strategies</a>
+   </li>
+   <li>
+   <a href='/Site/OurServices?Consultation'>Consultation and Support</a>
+   </li>
+   <li>
+   <a href='/Site/OurServices?Capacity'>Capacity Development Academy</a>
+   </li>
+ </ul>
+
+</div>
+
+<!-- identify News Room tap and it's data -->
+
+<div id="News" class="tabcontent">
+ <ul class="dropdown-menu">
+    <li>
+       <a href="/Site/Events">Events</a>
+       </li>
+       <li>
+       <a href="/Site/News">News</a>
+       </li>
+       <li>
+       <a href="/Site/Publications">Publications</a>
+     </li>
+ </ul>
+
+</div>
+<div id="Login" class="tabcontent">
+<ul>
+ <li>
+   <a href="http://apps.iti.gov.eg/ManagementSystem/intlogin.aspx">Login</a>
+ </li>
+</ul>
+
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
